@@ -1,0 +1,20 @@
+
+.movies {
+    background-color: lightgreen;
+    height: 100vh;
+    overflow-y: scroll;
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .movie {
+            background-color: white;
+            width: 250px;
+            padding: 2rem;
+            border: 2px solid white;
+            box-shadow: 3px 3px black;
+            margin: 0.5rem;
+        }
+    }
+    
+}

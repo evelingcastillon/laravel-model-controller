@@ -10,20 +10,26 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body>
-        <div class="container">
 
-            <div class="movies">
-                @foreach ($movies as $movie)
-                {{ $movie->title }}
-                @endforeach
-            </div>
+        <div id="site_main">
+
+            <section class="movies">
+
+                <div class="container">
+                    
+                    @foreach ($movies as $movie)
+                    <a class="movie">
+                        <h2 class="">Titolo: {{ $movie->title }}</h2>
+                        <h5>Titolo originale: {{$movie->original_title}}</h5>
+                        <p>Nationality: {{$movie->nationality}}</p>
+                        <p>Voto: {{$movie->vote}}</p>
+                    </a>
+                    @endforeach
+                </div>
+            </section>
         </div>
     </body>
 </html>
